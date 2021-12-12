@@ -5,7 +5,7 @@ using System.Web;
 using System.ComponentModel.DataAnnotations;
 
 namespace UITP_UGoriZhyve.Models
-{   
+{
 
     [Serializable]
     public class SkiComplect
@@ -24,7 +24,7 @@ namespace UITP_UGoriZhyve.Models
         //PROTOTYPE
         private static SkiComplect Ski_CheapChildren_female = new SkiComplect
         {
-            Title = "Ski-LightF (Child, female)",
+            Title = "Ski-LightF(Child, female)",
             Gender = "Female",
             Weight = 2,
             Length = 150,
@@ -34,7 +34,7 @@ namespace UITP_UGoriZhyve.Models
 
         private static SkiComplect Ski_CheapChildren_male = new SkiComplect
         {
-            Title = "Ski-LightM (Child, male)",
+            Title = "Ski-LightM(Child, male)",
             Gender = "Male",
             Weight = 2,
             Length = 150,
@@ -44,7 +44,7 @@ namespace UITP_UGoriZhyve.Models
 
         private static SkiComplect Ski_CheapAdult_female = new SkiComplect
         {
-            Title = "Ski-MediumF (Adult, female)",
+            Title = "Ski-MediumF(Adult, female)",
             Gender = "Female",
             Weight = 5,
             Length = 170,
@@ -54,7 +54,7 @@ namespace UITP_UGoriZhyve.Models
 
         private static SkiComplect Ski_CheapAdult_male = new SkiComplect
         {
-            Title = "Ski-MediumM (Adult, male)",
+            Title = "Ski-MediumM(Adult, male)",
             Gender = "Male",
             Weight = 5,
             Length = 170,
@@ -69,7 +69,7 @@ namespace UITP_UGoriZhyve.Models
             return scaff;
         }
 
-        public static SkiComplect NewSki_CheapChildren_female( bool occupied)
+        public static SkiComplect NewSki_CheapChildren_female(bool occupied)
         {
             return NewSki(occupied, Ski_CheapChildren_female);
         }
