@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/style.css">
+    <title>@ViewBag.Title - UITP_UGoriZhyve</title>
+</head>
+<body>
+    <div class="header-hero__bg">
+        <header class="header">
+            <div class="wrapper">
+                <div class="header__content">
+                    <div class="header__logo main__logo">
+                        <img src="~/Content/img/icoLogo.svg" alt="">
+                        <a href="#"><p class="logo"><span>mountain</span></br>hotel</p></a>
+                    </div>
+                    <div class="header__list">
+                        <nav>
+                            <ul class="header__list__body">
+                                <li class="header__list__item">@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li class="header__list__item">@Html.ActionLink("Place", "Index", "Home")</li>
+                                <li class="header__list__item">@Html.ActionLink("FAG", "Index", "Home")</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header__btn">
+                        @Html.ActionLink("Reserve", "Reserve", "Home", new { @class = "ptest reserve btn" })
+                        @Html.ActionLink("Recreation", "Recreation", "Home", new { @class = "ptest recreation btn" })
+                        <button class="btnOnMenu"><img src="~/Content/img/adaptivMenu.svg" alt=""></button>
+                    </div>
+                    <div class="mobile__menu">
+                        <div class="mobile__menu__btn">
+                            <button class="btnOnMenu "><img src="~/Content/img/closeMenuIco.svg" alt=""></button>
+                        </div>
+                        <div class="mobile__menu__list">
+                            <nav>
+                                <ul class="mobile__menu__list__body">
+                                    <li class="mobile__menu__list__item"><a href="#">Home</a></li>
+                                    <li class="mobile__menu__list__item"><a href="#">Reserve</a></li>
+                                    <li class="mobile__menu__list__item"><a href="#">Recreation</a></li>
+                                    <li class="mobile__menu__list__item"><a href="#">Place</a></li>
+                                    <li class="mobile__menu__list__item"><a href="#">FAG</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            @RenderBody()
+            <footer class="footer">
+                <div class="wrapper">
+                    <div class="footer__content">
+                        <div class="footer__list__block">
+                            <div class="footer__logo main__logo">
+                                <img src="~/Content/img/icoLogo.svg" alt="f">
+                                <p class="logo"><span>mountain</span></br>hotel</p>
+                            </div>
+                            <p class="footer__subtitle">© 2021 Mountain hotel, Inc., an Mountain hotel</br>Group family. All rights</br>reserved.</p>
+                        </div>
+                        <div class="footer__list__block">
+                            <h4>Company</h4>
+                            <nav>
+                                <ul class="footer__list__body">
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">About us</a>
+                                    </li>
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">Jobs</a>
+                                    </li>
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">List your property</a>
+                                    </li>
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">Partnership</a>
+                                    </li>
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">Advertising</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer__list__block">
+                            <h4>Explore</h4>
+                            <nav>
+                                <ul class="footer__list__body">
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">About us</a>
+                                    </li>
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">Jobs</a>
+                                    </li>
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">List your property</a>
+                                    </li>
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">Partnership</a>
+                                    </li>
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">Advertising</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer__list__block">
+                            <h4>Term and Policies</h4>
+                            <nav>
+                                <ul class="footer__list__body">
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">About us</a>
+                                    </li>
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">Jobs</a>
+                                    </li>
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">List your property</a>
+                                    </li>
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">Partnership</a>
+                                    </li>
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">Advertising</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer__list__block">
+                            <h4>Help</h4>
+                            <nav>
+                                <ul class="footer__list__body">
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">About us</a>
+                                    </li>
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">Jobs</a>
+                                    </li>
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">List your property</a>
+                                    </li>
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">Partnership</a>
+                                    </li>
+                                    <li class="footer__list__item">
+                                        <a href="#" class="footer__subtitle">Advertising</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer__list__block">
+                            <div class="footer__title__list">
+                                <h4>Get in touch</h4>
+                                <nav>
+                                    <ul class="footer__list__body">
+                                        <li class="footer__list__item">
+                                            <a href="#" class="footer__subtitle">Question or feedback?</a>
+                                        </li>
+                                        <li class="footer__list__item">
+                                            <a href="#" class="footer__subtitle">We’d love to hear from you</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="socialNetworks">
+                                <a href="#"><img src="~/Content/img/inst.svg" alt=""></a>
+                                <a href="#"><img src="~/Content/img/twit.svg" alt=""></a>
+                                <a href="#"><img src="~/Content/img/linke.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+    </div>
+
+    </main>
+    <script src="~/Scripts/script.js"></script>
+</body>
+</html>

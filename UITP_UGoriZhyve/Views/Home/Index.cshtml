@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+<!-- Підвантаження БД, на головну сторінку -->
+<p style="display: none;">@ViewBag.Rooms@ViewBag.SkiComplects</p>
+<!-- Якщо вимкнути, то швидкість завантаження головної сторінки збільшится. 
+    Проте швидкість завантаження Reserve i Recreation різко знизиться-->
+<section class="hero">
+    <div class="wrapper">
+        <div class="hero__content">
+            <h1 class="main__title">Relax with the best mountain</br>hotel in Ukraine</h1>
+            <p class="subtitle">We want you to feel confident in the holiday you get with us.</p>
+        </div>
+    </div>
+</section>
+<section class="hotelView">
+    <div class="wrapper">
+        <div class="hetelView__content">
+            <div class="hetelView__title">
+                <h2>The best places you can visit by visiting our hotel</h2>
+            </div>
+            <div class="hetelView__collage">
+                <div class="collage__left">
+                    <div class="place"><img src="~/Content/img/hotel-place-1.jpg" alt=""></div>
+                    <div class="place"><img src="~/Content/img/hotel-place-2.jpg" alt=""></div>
+                    <div class="place"><img src="~/Content/img/hotel-place-3.jpg" alt=""></div>
+                </div>
+                <div class="collage__rigth">
+                    <div class="place"><img src="~/Content/img/hotel-place-4.jpg" alt=""></div>
+                    <div class="place"><img src="~/Content/img/hotel-place-5.jpg" alt=""></div>
+                    <div class="place"><img src="~/Content/img/hotel-place-6.jpg" alt=""></div>
+                    <div class="place"><img src="~/Content/img/hotel-place-7.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="downloadApp">
+    <div class="wrapper">
+        <div class="downloadApp__content">
+            <div class="downloadApp__title">
+                <h2>Download</br>mountain hotel app!</h2>
+            </div>
+            <div class="downloadApp__link">
+                <a href="#" class="gp__link"><div class="linkBG"></div></a>
+                <a href="#" class="as__link"><div class="linkBG"></div></a>
+            </div>
+        </div>
+    </div>
+</section>

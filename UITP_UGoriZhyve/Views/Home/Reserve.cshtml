@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Reserve";
+}
+<div class="wrapper">
+    <div class="reserve__content">
+        <h1>Reserve</h1>
+        <form class="form__body" id="form__body" action="#">
+
+            <div class="userInfo__body">
+                <label for="enterEmail">Email</label>
+                <input type="text" name="enterEmail" class="enterEmail userInfo _req" placeholder="">
+                <label for="enterFonNumber">Phone Number</label>
+                <input type="text" name="enterFonNumber" class="enterFonNumber userInfo _req" placeholder="">
+                <label for="enterName">Name</label>
+                <input type="text" name="enterName" class="enterName userInfo _req">
+            </div>
+            <div class="interval">
+                <div class="interval__body checkIn__body">
+                    <label for="checkIn">checkin</label>
+                    <input type="date" name="checkIn" class="checkIn">
+                    <!-- <select name = "checkIn" class = "checkIn">
+
+                    </select> -->
+                </div>
+                <div class="interval__body checkOut__body">
+                    <label for="checkOut">checkout</label>
+                    <input type="date" name="checkOut" class="checkOut">
+                    <!-- <select name = "checkOut" class = "checkOut">
+
+                    </select> -->
+                </div>
+            </div>
+            <label for="listRoom">Rooms</label>
+            <select name="listRoom" class="listRoom">
+
+                @if (ViewBag.Rooms != null)
+                {
+                    foreach (var room in ViewBag.Rooms)
+                    {
+                        if (!room.Occupied)
+                        {
+                            <option value="@room">@room.Title</option>
+                        }
+                    }
+                }
+                else
+                {<!-- <option selected disabled>Choose Room</option> -->
+                    <option selected value="room standart">Standart <span>1800₴</span></option>
+                    <option value="room standartPlus">Standart Plus <span>2400₴</span></option>
+                    <option value="room bisinessClass">Bisiness Class <span>3100₴</span></option>
+                }
+            </select>
+            <input type="submit" name="reserve" class="reserve" value="reserve">
+        </form>
+    </div>
+</div>

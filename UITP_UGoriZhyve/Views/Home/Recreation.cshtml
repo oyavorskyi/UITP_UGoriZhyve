@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Recreation";
+}
+<div class="wrapper">
+    <div class="recreation__content">
+        <h1>Recreation</h1>
+        <form class="form__body form__bodyR" action="#">
+            <div class="userInfoRecreation__body">
+                <label for="enterEmail">Email</label>
+                <input type="text" name="enterEmail" class="enterEmailRec userInfoRecreation" placeholder="">
+                <label for="enterFonNumber">Phone Number</label>
+                <input type="text" name="enterFonNumber" class="enterFonNumberRec userInfoRecreation " placeholder="">
+                <label for="enterName">Name</label>
+                <input type="text" name="enterNameRec" class="enterNameRec userInfoRecreation">
+            </div>
+            <div class="ordering__skis">
+                <select name="listSkis" class="listSkis">
+                    <!-- <option selected disabled>Choose Room</option> -->
+                    @foreach (var ski in ViewBag.SkiComplects)
+                    {
+                        <option value="@ski.Title">@ski.Title <span>@ski.GenPrice $</span></option>
+                    }
+                    <!--
+        <option selected value="standartSkis">Комплект Лижі Стандарт</option>
+    <option value="premiumtSkis">Комплект Лижі Преміум</option>
+    <option value="topSkis">Комплект Лижі Топ</option>
+    <option value="standartKidsSkis">Комплект Лижі Стандарт Дитячі</option>
+    <option value="premiumKidsSkis">Комплект Лижі Преміум Дитячі</option>
+    -->
+
+                </select>
+                <div class="range__body">
+                    <datalist id="tickmarks">
+                        <option value="1" label="1 дн">
+                        <option value="2" label="2 дн">
+                        <option value="3" label="3 дн">
+                        <option value="4" label="4 дн">
+                        <option value="5" label="5 дн">
+                        <option value="6" label="6 дн">
+                        <option value="7" label="7 дн">
+                    </datalist>
+                    <input class="range" type="range" min="1" max="7" value="1" list="tickmarks">
+                    <p class="cost">180<span>₴</span></p>
+                </div>
+            </div>
+            <input type="submit" name="reserve reserveSkis" class="reserve reserveSkis" value="reserve">
+        </form>
+    </div>
+</div>
